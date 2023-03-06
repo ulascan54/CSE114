@@ -1,4 +1,7 @@
+// given two sides and angle in between, finde third side of a triangle
+// a ^2 =b^2 + c ^2 - 2bc
 #include <stdio.h>
+#include <ctype.h>
 // find the uppercase of a lowercase char entered by the user with a function
 
 // this function assumes that ch is a lowercase char, return uppercase version
