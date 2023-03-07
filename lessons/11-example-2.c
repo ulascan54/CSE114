@@ -1,16 +1,15 @@
-// write a function to convert a lowercase letter to uppercase
+// given two sides and angle in between, finde third side of a triangle
+// a ^2 =b^2 + c ^2 - 2bc cos(alpha)
 #include <stdio.h>
-
-char to_upper(char c)
-{
-    return 'A' + (c - 'a');
-}
-
+#include <math.h>
+// double sqrt(double a);
 int main()
 {
-    char ch1, ch2;
-    printf("Enter a lowercase letter: ");
-    scanf("%c", &ch1);
-    ch2 = to_upper(ch1);
-    printf("uppercase: %c\n", ch2);
+    double a, b, c;
+    int alpha;
+    printf("Enter b,c and angle in between alpha: ");
+    scanf("%lf %lf %d", &b, &c, &alpha);
+    a = sqrt(pow(b, 2.0) + pow(c, 2.0) - 2 * b * c * cos((alpha / 180.0) * M_PI));
+    printf("Third side: %f\n", a);
+    return 0;
 }
