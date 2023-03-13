@@ -14,11 +14,11 @@ int main()
     scanf("%d", &grade);
     if (90 <= grade && grade <= 100)
         letter = 'A';
-    else if (80 <= grade && grade <= 90)
+    else if (80 <= grade && grade < 90)
         letter = 'B';
-    else if (70 <= grade && grade <= 80)
+    else if (70 <= grade && grade < 80)
         letter = 'C';
-    else if (0 <= grade && grade <= 70)
+    else if (0 <= grade && grade < 70)
         letter = 'D';
     else
     {
@@ -26,5 +26,15 @@ int main()
         printf("Yanlış değer girdiniz!");
     }
 
-    printf("letter %c\n", letter);
+    printf("%c\n", letter);
+
+    // optimize:
+    // if (90 <= grade)
+    //     letter = 'A';
+    // else if (80 <= grade)
+    //     letter = 'B';
+    // else if (70 <= grade)
+    //     letter = 'C';
+    // else
+    //     letter = 'D';
 }
