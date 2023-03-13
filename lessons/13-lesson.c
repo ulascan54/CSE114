@@ -38,7 +38,7 @@ int main()
     if (a < b)
         if (b < c)
             d = 500;
-        else
+        else // even though aligned with first if this else belongs to second if
             d = 400;
     printf("d:%d \n", d);
 
